@@ -1,0 +1,12 @@
+{
+  "base_commit": "e2c24df994a9987dae0147be02be0fe9cf9585e8",
+  "fail_to_pass": [
+    "test_popularity_unification.test_track_metadata_popularity_type",
+    "test_popularity_unification.test_queue_manager_preference_score"
+  ],
+  "pass_to_pass": [
+    "test_popularity_unification.test_unified_track_popularity_type"
+  ],
+  "test_patch": "diff --git a/backend/tests/__init__.py b/backend/tests/__init__.py\nnew file mode 100644\nindex 0000000..e69de29\n--- /dev/null\n+++ b/backend/tests/__init__.py\ndiff --git a/backend/tests/test_popularity_unification.py b/backend/tests/test_popularity_unification.py\nnew file mode 100644\nindex 0000000..abcdef0\n--- /dev/null\n+++ b/backend/tests/test_popularity_unification.py\n@@ -0,0 +1,30 @@\n+import pytest\n+from backend.models import TrackMetadata, UnifiedTrack, SessionContext, PreferenceHints\n+from backend.queue_manager import AdaptiveQueueManager\n+\n+\n+def test_unified_track_popularity_type():\n+    track = UnifiedTrack(id=\"1\", title=\"title\", artist=\"artist\", source=\"spotify\")\n+    assert isinstance(track.popularity, float)\n+    assert track.popularity == 0.0\n+\n+\n+def test_track_metadata_popularity_type():\n+    track = TrackMetadata(\n+        id=\"1\", uri=\"uri\", name=\"name\", artist_id=\"a1\", artist_name=\"artist\",\n+        album_name=\"album\", duration_ms=100\n+    )\n+    assert isinstance(track.popularity, float)\n+    assert track.popularity == 0.0\n+\n+\n+def test_queue_manager_preference_score():\n+    track = TrackMetadata(\n+        id=\"1\", uri=\"uri\", name=\"name\", artist_id=\"a1\", artist_name=\"artist\",\n+        album_name=\"album\", duration_ms=100, popularity=0.5\n+    )\n+    session = SessionContext(time_of_day=\"morning\", activity=\"workout\", energy=0.8)\n+    hints = PreferenceHints()\n+    manager = AdaptiveQueueManager()\n+    score = manager._preference_score(track, session, hints)\n+    assert score > 0.0\n",
+  "selected_test_files_to_run": "backend/tests/test_popularity_unification.py"
+}
