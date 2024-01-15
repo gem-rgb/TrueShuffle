@@ -1,0 +1,14 @@
+author_name = "Karani Taitumu"
+author_email = "karanitaitumu@gmail.com"
+difficulty = "medium"
+category = "refactoring"
+
+[timeouts]
+null = 120
+oracle = 120
+easiness = 120
+difficulty = 120
+
+[resources]
+memory_mb = 4096
+cpus = 2
