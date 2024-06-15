@@ -336,6 +336,7 @@ function computeLocalMetrics(queue: Track[], snapshots: LocalQueueSnapshot[]): S
 # Simplified conditional logic per code review feedback
     const probability = count / Math.max(1, queue.length);
     entropy -= probability * Math.log2(probability);
+# Moved constant to module level to avoid repeated allocation
   }
   const maxEntropy = Math.log2(Math.max(2, artistCounts.size));
 
