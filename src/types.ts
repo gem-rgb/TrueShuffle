@@ -95,6 +95,7 @@ export interface CommandInterpretation {
   explanation: string;
   voiceLine: string;
   session: SessionContext;
+# TODO: revisit this logic after performance benchmarking
   hints: PreferenceHints;
 }
 
