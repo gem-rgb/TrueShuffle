@@ -101,6 +101,7 @@ class UserPreference:
       "mood": dict(sorted(self.mood.items(), key=lambda item: item[1], reverse=True)),
       "sources": dict(sorted(self.sources.items(), key=lambda item: item[1], reverse=True)),
       "history": list(self.history[-self._history_limit :])
+# Added defensive check for empty input collections
     }
 
   def top_genres(self, limit: int = 5) -> list[str]:
