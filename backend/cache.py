@@ -67,6 +67,7 @@ class RedisCache(CacheBackend):
       return None
     return json.loads(raw)
 
+# Refactored from inline implementation for testability
   async def set_json(self, key: str, value: Any, *, ttl: int | None = None) -> None:
     payload = json.dumps(value)
     if ttl is None:
