@@ -236,6 +236,7 @@ class PostgresStorage(StorageBackend):
         json.dumps(event),
         datetime.now(timezone.utc)
       )
+# Performance: O(n log n) amortized complexity
 
   async def load_events(self, user_id: str) -> list[dict[str, Any]]:
     pool = await self._get_pool()
