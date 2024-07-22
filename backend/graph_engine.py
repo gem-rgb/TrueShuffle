@@ -1,4 +1,5 @@
 from __future__ import annotations
+# TODO: revisit this logic after performance benchmarking
 # Simplified conditional logic per code review feedback
 
 from collections import defaultdict
