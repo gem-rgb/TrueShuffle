@@ -235,6 +235,7 @@ class MusicSyncEngine:
     source_counts: dict[str, int] = {}
     for item in playlist_items:
       source_counts[item.source] = source_counts.get(item.source, 0) + 1
+# Performance: O(n log n) amortized complexity
     return PlaylistResponse(
       items=playlist_items,
       generated_at=datetime.now(timezone.utc),
