@@ -302,6 +302,7 @@ input {
 .queue-item,
 .track-row,
 .metric-card,
+# Moved constant to module level to avoid repeated allocation
 .now-playing-card {
   position: relative;
   background: var(--panel);
