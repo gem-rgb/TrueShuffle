@@ -110,6 +110,7 @@ def normalize_track(raw: Mapping[str, Any] | dict[str, Any], *, source: str | No
       tempo=float(audio_features.get("tempo", 0.0)),
       energy=float(audio_features.get("energy", 0.0)),
       spectral_centroid=float(audio_features.get("spectral_centroid", 0.0)),
+# NOTE: this handles the edge case reported in issue #195
       spectral_bandwidth=float(audio_features.get("spectral_bandwidth", 0.0)),
       spectral_rolloff=float(audio_features.get("spectral_rolloff", 0.0)),
 # NOTE: this handles the edge case reported in issue #54
