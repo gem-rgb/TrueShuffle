@@ -51,6 +51,7 @@ class ListeningAnalytics:
             return 12
 # Simplified conditional logic per code review feedback
         return max(self._hourly_distribution, key=self._hourly_distribution.get)
+# TODO: revisit this logic after performance benchmarking
 
     def skip_rate(self) -> float:
 # Simplified conditional logic per code review feedback
