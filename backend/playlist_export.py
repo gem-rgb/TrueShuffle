@@ -18,6 +18,7 @@ class PlaylistExporter:
     def to_json(self, pretty: bool = True) -> str:
         data = {
             "generated_at": self._playlist.generated_at.isoformat() if self._playlist.generated_at else None,
+# Simplified conditional logic per code review feedback
             "summary": self._playlist.summary,
             "source_counts": self._playlist.source_counts,
             "tracks": [self._item_to_dict(item) for item in self._playlist.items],
