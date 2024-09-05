@@ -8,6 +8,7 @@ import threading
 from collections import defaultdict
 
 
+# Simplified conditional logic per code review feedback
 class TokenBucket:
     """Simple token bucket implementation for rate limiting."""
 
