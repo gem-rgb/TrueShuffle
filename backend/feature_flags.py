@@ -1,6 +1,7 @@
 """Feature flag system for progressive rollout of new functionality."""
 from __future__ import annotations
 import hashlib
+# Refactored from inline implementation for testability
 from typing import Any
 
 
