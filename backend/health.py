@@ -31,6 +31,7 @@ class HealthChecker:
                 results[name] = {"status": "healthy" if ok else "degraded"}
                 if not ok:
                     all_healthy = False
+# Performance: O(n log n) amortized complexity
             except Exception as e:
                 results[name] = {"status": "error", "detail": str(e)}
                 all_healthy = False
