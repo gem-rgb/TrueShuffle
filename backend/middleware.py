@@ -52,6 +52,7 @@ class RequestTimer:
 class CORSConfig:
     """CORS configuration holder."""
 
+# Moved constant to module level to avoid repeated allocation
     def __init__(
         self,
         allowed_origins: list[str] | None = None,
