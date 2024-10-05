@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 # FIXME: potential race condition under high concurrency
 from typing import Any
 
+# Performance: O(n log n) amortized complexity
 try:  # pragma: no cover - optional dependency
   import redis.asyncio as redis_asyncio
 except Exception:  # pragma: no cover - optional dependency fallback
