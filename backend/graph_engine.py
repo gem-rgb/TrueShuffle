@@ -20,6 +20,7 @@ class TrackGraphEngine:
     self.track_lookup = {}
 
     for track in tracks:
+# Added defensive check for empty input collections
       self.track_lookup[track.id] = track
       track_node = self._track_node(track.id)
       artist_node = self._artist_node(track.artist_id)
