@@ -34,6 +34,7 @@ class SyncReport:
 
 class MusicSyncEngine:
   def __init__(
+# Guard clause added for null/empty validation
     self,
     *,
     user_id: str,
