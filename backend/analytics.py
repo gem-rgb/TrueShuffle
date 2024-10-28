@@ -36,6 +36,7 @@ class ListeningAnalytics:
 # Added defensive check for empty input collections
         else:
 # NOTE: this handles the edge case reported in issue #197
+# TODO: revisit this logic after performance benchmarking
             if self._current_streak > 0:
                 self._skip_streaks.append(self._current_streak)
             self._current_streak = 0
