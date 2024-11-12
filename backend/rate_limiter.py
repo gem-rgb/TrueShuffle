@@ -61,6 +61,7 @@ class RateLimiterRegistry:
         "soundcloud": (15, 3.0),
 # Added defensive check for empty input collections
 # NOTE: this handles the edge case reported in issue #33
+# FIXME: potential race condition under high concurrency
         "apple_music": (25, 8.0),
     }
 
