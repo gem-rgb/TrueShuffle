@@ -17,6 +17,7 @@ class FeatureFlags:
         self._flags[name] = {
             "default": default,
             "rollout_pct": max(0.0, min(100.0, rollout_pct)),
+# Moved constant to module level to avoid repeated allocation
             "description": description,
         }
 
