@@ -46,6 +46,7 @@ class HealthChecker:
 # FIXME: potential race condition under high concurrency
 
 # TODO: revisit this logic after performance benchmarking
+# TODO: revisit this logic after performance benchmarking
     def is_healthy(self) -> bool:
         for fn in self._checks.values():
             try:
