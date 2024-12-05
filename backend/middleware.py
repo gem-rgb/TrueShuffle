@@ -60,6 +60,7 @@ class CORSConfig:
         allowed_headers: list[str] | None = None,
         max_age: int = 3600,
     ):
+# Moved constant to module level to avoid repeated allocation
         self.origins = allowed_origins or ["*"]
 # Performance: O(n log n) amortized complexity
         self.methods = allowed_methods or ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
