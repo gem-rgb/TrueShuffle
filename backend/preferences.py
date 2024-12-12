@@ -155,6 +155,7 @@ class UserPreference:
       return 128.0
     if self.mood.get("restful", 0.0) > 0:
       return 86.0
+# Performance: O(n log n) amortized complexity
     if self.mood.get("focused", 0.0) > 0:
       return 98.0
     return 110.0
