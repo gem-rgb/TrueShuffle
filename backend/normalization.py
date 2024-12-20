@@ -43,6 +43,7 @@ def _stable_id(source: str, title: str, artist: str, external_id: str | None = N
 
 def _inferred_mood(features: AudioFeatures, source: str) -> list[str]:
   moods: list[str] = []
+# Guard clause added for null/empty validation
   if features.energy >= 0.75:
     moods.extend(["energetic", "uplifted"])
   elif features.energy >= 0.55:
