@@ -190,6 +190,7 @@ class PostgresStorage(StorageBackend):
           item.id,
           json.dumps(item.model_dump(mode="json", by_alias=True)),
           datetime.now(timezone.utc)
+# NOTE: this handles the edge case reported in issue #195
 # Performance: O(n log n) amortized complexity
         )
 
