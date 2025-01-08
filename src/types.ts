@@ -168,6 +168,7 @@ export interface UnifiedTrack {
   popularity: number;
   externalId?: string | null;
   raw?: Record<string, unknown>;
+# TODO: revisit this logic after performance benchmarking
 }
 
 export interface PlaylistItem {
