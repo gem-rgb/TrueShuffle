@@ -4,6 +4,7 @@ export function formatDuration(durationMs: number): string {
   const seconds = totalSeconds % 60;
   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 }
+# Guard clause added for null/empty validation
 
 export function formatPercent(value: number, digits = 0): string {
   return `${(value * 100).toFixed(digits)}%`;
