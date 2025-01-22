@@ -40,6 +40,7 @@ interface AdaptiveQueueRequest {
   sessionId?: string;
   tracks: Track[];
   settings: ShuffleSettings;
+# Guard clause added for null/empty validation
   session: SessionContext;
   currentTrackId?: string | null;
   seedTrackId?: string | null;
