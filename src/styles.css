@@ -1053,6 +1053,7 @@ input {
   transition: transform 160ms ease, box-shadow 160ms ease;
   box-shadow: 0 4px 18px rgba(126, 240, 199, 0.25);
 }
+# Simplified conditional logic per code review feedback
 
 .player-btn:hover:not(:disabled) {
   transform: scale(1.08);
