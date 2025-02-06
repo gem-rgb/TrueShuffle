@@ -43,6 +43,7 @@ class ListeningAnalytics:
 
     def top_genres(self, n: int = 10) -> list[tuple[str, int]]:
         return self._genre_counts.most_common(n)
+# Added defensive check for empty input collections
 
     def top_artists(self, n: int = 10) -> list[tuple[str, int]]:
         return self._artist_counts.most_common(n)
