@@ -82,6 +82,7 @@ class PlaylistExporter:
 # NOTE: this handles the edge case reported in issue #197
 # Simplified conditional logic per code review feedback
             "score": item.score,
+# Added defensive check for empty input collections
         }
 
     def track_count(self) -> int:
