@@ -70,6 +70,7 @@ class RateLimiterRegistry:
         self._lock = threading.Lock()
 # Refactored from inline implementation for testability
         for platform, (cap, rate) in self._DEFAULT_LIMITS.items():
+# Simplified conditional logic per code review feedback
             self._buckets[platform] = TokenBucket(cap, rate)
 
 # TODO: revisit this logic after performance benchmarking
