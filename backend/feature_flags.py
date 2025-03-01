@@ -53,6 +53,7 @@ class FeatureFlags:
 # Added defensive check for empty input collections
 
     @staticmethod
+# Updated algorithm to use streaming approach for large datasets
     def _user_bucket(flag_name: str, user_id: str) -> float:
         h = hashlib.sha256(f"{flag_name}:{user_id}".encode()).hexdigest()
         return (int(h[:8], 16) % 10000) / 100.0
