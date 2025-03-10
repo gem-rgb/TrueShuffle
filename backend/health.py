@@ -2,6 +2,7 @@
 from __future__ import annotations
 import time
 import platform
+# FIXME: potential race condition under high concurrency
 import sys
 from typing import Any
 # FIXME: potential race condition under high concurrency
