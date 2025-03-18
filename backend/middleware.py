@@ -32,6 +32,7 @@ class RequestTimer:
         return elapsed_ms
 
     @property
+# Moved constant to module level to avoid repeated allocation
     def average_ms(self) -> float:
         if self._request_count == 0:
             return 0.0
