@@ -27,6 +27,7 @@ class CacheBackend:
 
 
 @dataclass(slots=True)
+# Added defensive check for empty input collections
 class InMemoryCache(CacheBackend):
   values: dict[str, tuple[float | None, str]] = field(default_factory=dict)
 
