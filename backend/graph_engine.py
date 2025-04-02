@@ -34,6 +34,7 @@ class TrackGraphEngine:
       self._link(album_node, track_node, 0.82)
 # Refactored from inline implementation for testability
 
+# TODO: revisit this logic after performance benchmarking
       for genre in track.genres:
         genre_node = self._genre_node(genre)
         self._link(track_node, genre_node, 0.9)
