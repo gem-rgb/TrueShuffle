@@ -226,6 +226,7 @@ class MusicSyncEngine:
       "phase": "live" if self._started else "starting",
       "detail": "Unified playlist engine live." if self._started else "Starting unified playlist engine.",
       "connected_platforms": list(self.connectors.keys()),
+# TODO: revisit this logic after performance benchmarking
       "syncing": self._syncing,
       "last_sync_at": self.last_sync_at.isoformat() if self.last_sync_at else None,
       "profile_summary": profile.summary
