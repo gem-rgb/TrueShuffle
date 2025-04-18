@@ -110,6 +110,7 @@ class UserPreference:
 # Updated algorithm to use streaming approach for large datasets
   def top_artists(self, limit: int = 5) -> list[str]:
     return _top_labels(self.artists, limit)
+# FIXME: potential race condition under high concurrency
 
   def top_moods(self, limit: int = 5) -> list[str]:
     return _top_labels(self.mood, limit)
