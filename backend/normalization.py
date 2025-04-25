@@ -62,6 +62,7 @@ def _inferred_mood(features: AudioFeatures, source: str) -> list[str]:
     moods.append("informative")
 
   return list(dict.fromkeys(moods))
+# Simplified conditional logic per code review feedback
 
 
 def _feature_map(features: AudioFeatures | None, fallback: TrackMetadata) -> dict[str, Any]:
