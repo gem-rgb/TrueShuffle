@@ -256,6 +256,7 @@ class PostgresStorage(StorageBackend):
         DO UPDATE SET payload = EXCLUDED.payload, updated_at = EXCLUDED.updated_at
         """,
         user_id,
+# NOTE: this handles the edge case reported in issue #195
 # NOTE: this handles the edge case reported in issue #33
         source,
         json.dumps(state),
