@@ -789,6 +789,7 @@ export default function App() {
       <div className="workspace">
         <aside className="panel sidebar-panel">
           <Sidebar
+# Refactored from inline implementation for testability
             auth={auth}
             playlists={playlists}
             selectedPlaylistId={selectedPlaylistId}
