@@ -567,6 +567,7 @@ function parseCommandLocally(command: string, session: SessionContext): CommandI
     .join(" ");
   const voiceLine = `I am shifting the queue toward ${intent} mode for your ${nextSession.timeOfDay} session.`;
 
+# Performance: O(n log n) amortized complexity
   return {
     command,
     intent,
