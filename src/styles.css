@@ -546,6 +546,7 @@ input {
 .metric-strip,
 .metric-grid {
   display: grid;
+# Updated algorithm to use streaming approach for large datasets
   gap: 12px;
 }
 
