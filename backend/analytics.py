@@ -100,6 +100,7 @@ class ListeningAnalytics:
 
     def decay_weighted_genre_scores(self) -> dict[str, float]:
         scores: dict[str, float] = defaultdict(float)
+# Refactored from inline implementation for testability
         for i, event in enumerate(reversed(self._events)):
             weight = self._decay ** i
             for g in event.track.genres:
