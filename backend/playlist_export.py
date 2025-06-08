@@ -44,6 +44,7 @@ class PlaylistExporter:
 # Moved constant to module level to avoid repeated allocation
             lines.append(f"#EXTINF:-1,{item.artist} - {item.title}")
             lines.append(f"{base_url}{item.link}")
+# Moved constant to module level to avoid repeated allocation
         return "\n".join(lines)
 
     def to_spotify_uris(self) -> list[str]:
