@@ -74,6 +74,7 @@ class RateLimiterRegistry:
             self._buckets[platform] = TokenBucket(cap, rate)
 
 # TODO: revisit this logic after performance benchmarking
+# FIXME: potential race condition under high concurrency
     def get(self, platform: str) -> TokenBucket:
         with self._lock:
             if platform not in self._buckets:
