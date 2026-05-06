@@ -1,1 +1,1 @@
-Schema version 78\n
+Schema version 79\n
