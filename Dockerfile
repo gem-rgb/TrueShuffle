@@ -26,3 +26,4 @@ RUN pip install --no-cache-dir -r backend/requirements.txt
 
 COPY . .
 RUN npm run build
+# chore(docker): optimize multi-stage build image size\n
