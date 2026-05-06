@@ -1,0 +1,16 @@
+node_modules/
+dist/
+src-tauri/target/
+.venv/
+backend/.venv/
+__pycache__/
+.pytest_cache/
+.env
+.env.*
+*.log
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+Thumbs.db
+Desktop.ini
+
