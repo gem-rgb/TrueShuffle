@@ -1,0 +1,1 @@
+# style(lyrics): improve typography for synchronized lyrics\n
