@@ -1,1 +1,1 @@
-Schema version 7\n
+Schema version 8\n
