@@ -25,7 +25,9 @@ for i in range(50):
             'acoustics': round(random.random(), 3),
             'vocals': round(random.random(), 3),
             'play_freq': random.randint(0, 1000000),
-            'skip_freq': random.randint(0, 50000)
+            'skip_freq': random.randint(0, 50000),
+            'audio_signature': [round(random.gauss(0, 1), 5) for _ in range(512)],
+            'frequency_bands': [round(random.uniform(-50, 50), 3) for _ in range(128)]
         }
         chunk_data.append(track)
     
