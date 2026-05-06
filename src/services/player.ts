@@ -1,0 +1,1 @@
+# fix(player): handle gapless playback transition errors\n
