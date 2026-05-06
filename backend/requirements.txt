@@ -4,3 +4,4 @@ pydantic==2.7.4
 librosa==0.10.2
 asyncpg==0.29.0
 redis==5.0.4
+# chore(deps): update librosa to 0.10.2\n
